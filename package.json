@@ -1,11 +1,11 @@
 {
-  "name": "api-vendas-restnodetypescript",
+  "name": "api-builder-pokemon-pnite",
   "version": "1.0.0",
-  "description": "Api de cadastro e venda de produtos para estudo de Back-end em NodeJS com Typescrit",
+  "description": "Api de cadastro e consulta de Builds do Game Pokémon Unite",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/index.ts",
     "lint": "eslint . --ext .ts",
     "lint-fix": "eslint . --ext .ts --fix",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
