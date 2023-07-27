@@ -13,10 +13,10 @@ export default class PokemonController {
 
 
     public async create(request: Request, response: Response): Promise<Response> {
-        const { name, stage_0_name, stage_1_name, stage_1_lvlup, stage_2_name, stage_2_lvlup, range, role, difficulty } = request.body;
-        const createProduct = new CreatePokemonService();
+        const { name, stage_0_name, stage_1_name, stage_1_lvlup, stage_2_name, stage_2_lvlup, range, role, difficulty, attackerType } = request.body;
+        const createPokemon = new CreatePokemonService();
 
-        const product = await createProduct.execute({ name, stage_0_name, stage_1_name, stage_1_lvlup, stage_2_name, stage_2_lvlup, range, role, difficulty });
+        const product = await createPokemon.execute({ name, stage_0_name, stage_1_name, stage_1_lvlup, stage_2_name, stage_2_lvlup, range, role, difficulty, attackerType });
         return response.json(product);
     }
 
