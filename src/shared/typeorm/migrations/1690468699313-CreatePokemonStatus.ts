@@ -51,6 +51,16 @@ export class CreatePokemonStatus1690468699313 implements MigrationInterface {
                     {
                         name: 'lifesteal',
                         type: 'int',
+                    }, 
+                    {
+                        name: 'created_at',
+                        type: 'timestamp with time zone',
+                        default: 'now()',
+                    },
+                    {
+                        name: 'updated_at',
+                        type: 'timestamp with time zone',
+                        default: 'now()',
                     },
                 ], foreignKeys: [
                     {

@@ -41,6 +41,16 @@ export class CreateSkill1690469965241 implements MigrationInterface {
                         name: 'learn_level',
                         type: 'int',
                     },
+                    {
+                        name: 'created_at',
+                        type: 'timestamp with time zone',
+                        default: 'now()',
+                    },
+                    {
+                        name: 'updated_at',
+                        type: 'timestamp with time zone',
+                        default: 'now()',
+                    },
                 ], foreignKeys: [
                     {
                         name: 'pokemon_id_fk',

@@ -28,7 +28,17 @@ export class CreateBattleIten1690466501389 implements MigrationInterface {
                         type: 'decimal',
                         precision: 10,
                         scale: 2,
-                    }
+                    },
+                    {
+                        name: 'created_at',
+                        type: 'timestamp with time zone',
+                        default: 'now()',
+                    },
+                    {
+                        name: 'updated_at',
+                        type: 'timestamp with time zone',
+                        default: 'now()',
+                    },
                 ],
             }),
         );
