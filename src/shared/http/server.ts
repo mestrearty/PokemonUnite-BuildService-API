@@ -1,6 +1,7 @@
 import express, { Response, Request, NextFunction } from 'express';
 import { errors } from 'celebrate';
 import AppError from '@shared/errors/AppError';
+import '@shared/typeorm';
 
 export default class Server {
 
