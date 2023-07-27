@@ -1,5 +1,5 @@
 import { getCustomRepository } from "typeorm";
-import { PokemonRepository } from "../typeorm/repositories/PokemonRepository";
+import { PokemonRepository } from "../typeorm/repositories/pokemonRepository";
 import AppError from "@shared/errors/AppError";
 import PokemonEntitie from "../typeorm/entities/pokemonEntitie";
 
