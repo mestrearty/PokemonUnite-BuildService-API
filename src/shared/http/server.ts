@@ -3,6 +3,7 @@ import { errors } from 'celebrate';
 import AppError from '@shared/errors/AppError';
 import '@shared/typeorm';
 import routes from './routes';
+import cors from 'cors';
 
 export default class Server {
 
@@ -19,10 +20,12 @@ export default class Server {
         Server.serverApp = app;
 
         //middlewares
-        app.use(routes); //gerenciador de rotas
-        app.use(express.json());//Parser para ler em padrão JSON
-        app.use(errors()); // validador de erros pelo celebrate
 
+        app.use(cors());//Validador de campos
+        app.use(express.json());//Parser para ler em padrão JSON
+        app.use(routes); //gerenciador de rotas
+        app.use(errors()); // validador de erros pelo celebrate
+        
         //Esposta em caso de erro de requisição
         app.use((error: Error, request: Request, response: Response, next: NextFunction) => {
             if (error instanceof AppError) {
