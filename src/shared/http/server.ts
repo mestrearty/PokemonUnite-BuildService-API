@@ -2,6 +2,7 @@ import express, { Response, Request, NextFunction } from 'express';
 import { errors } from 'celebrate';
 import AppError from '@shared/errors/AppError';
 import '@shared/typeorm';
+import routes from './routes';
 
 export default class Server {
 
@@ -18,6 +19,7 @@ export default class Server {
         Server.serverApp = app;
 
         //middlewares
+        app.use(routes); //gerenciador de rotas
         app.use(express.json());//Parser para ler em padrão JSON
         app.use(errors()); // validador de erros pelo celebrate
 
