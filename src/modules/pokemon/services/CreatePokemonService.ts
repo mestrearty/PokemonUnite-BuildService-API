@@ -15,7 +15,7 @@ interface IRequest {
     difficulty: string;
 }
 
-class CreateProductService {
+class CreatePokemonService {
     public async execute({ name, stage_0_name, stage_1_name, stage_1_lvlup, stage_2_name, stage_2_lvlup, range, role, difficulty }: IRequest): Promise<PokemonEntitie> {
         const pokemonRepository = getCustomRepository(PokemonRepository);
         let pokemon = await pokemonRepository.findByName(name);
@@ -32,4 +32,4 @@ class CreateProductService {
     }
 }
 
-export default CreateProductService;
+export default CreatePokemonService;
