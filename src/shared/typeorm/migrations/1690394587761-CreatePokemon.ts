@@ -52,6 +52,10 @@ export class CreatePokemon1690394587761 implements MigrationInterface {
                         type: 'varchar',
                     },
                     {
+                        name: 'attacker_type',
+                        type: 'varchar',
+                    },
+                    {
                         name: 'created_at',
                         type: 'timestamp with time zone',
                         default: 'now()',

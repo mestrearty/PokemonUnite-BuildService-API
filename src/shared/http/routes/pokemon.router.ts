@@ -18,7 +18,9 @@ pokemonRouter.post('/', celebrate({
         stage_2_lvlup: Joi.number().required(),
         range: Joi.string().required(),
         role: Joi.string().required(),
-        difficulty: Joi.string().required()
+        difficulty: Joi.string().required(),
+        attacker_type: Joi.string().required()
+
     }
 }), pokemonController.create);
 

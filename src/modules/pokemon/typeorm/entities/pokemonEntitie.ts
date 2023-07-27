@@ -33,7 +33,7 @@ class PokemonEntitie {
     difficulty: string;
 
     @Column()
-    attackerType: string;
+    attacker_type: string;
 
     @CreateDateColumn()
     created_at: Date;
