@@ -22,6 +22,7 @@ export class CreateSkill1690469965241 implements MigrationInterface {
                     {
                         name: 'name',
                         type: 'varchar',
+                        isUnique: true,
                     },
                     {
                         name: 'description',

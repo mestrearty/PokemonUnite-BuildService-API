@@ -18,6 +18,7 @@ export class CreateHeldIten1690468618518 implements MigrationInterface {
                     {
                         name: 'name',
                         type: 'varchar',
+                        isUnique: true,
                     },
                     {
                         name: 'description',

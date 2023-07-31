@@ -18,6 +18,7 @@ export class CreateBattleIten1690466501389 implements MigrationInterface {
                     {
                         name: 'name',
                         type: 'varchar',
+                        isUnique: true,
                     },
                     {
                         name: 'description',

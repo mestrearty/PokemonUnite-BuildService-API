@@ -18,6 +18,7 @@ export class CreatePokemon1690394587761 implements MigrationInterface {
                     {
                         name: 'name',
                         type: 'varchar',
+                        isUnique: true,
                     },
                     {
                         name: 'stage_0_name',
